@@ -14,6 +14,16 @@ class Welcome extends CI_Controller {
 		// $this->load->model('model_products');
         $data['products'] = $this->model_products->all();
 		// var_dump($data['products']);
+        $this->load->view('dashboard', $data);
+        $this->load->library('form_validation');
+
+    }
+
+    public function dashboard()
+    {
+		// $this->load->model('model_products');
+        $data['products'] = $this->model_products->all();
+		// var_dump($data['products']);
         $this->load->view('welcome_message', $data);
     }
     
@@ -29,7 +39,7 @@ class Welcome extends CI_Controller {
 // var_dump($data);
         $this->cart->insert($data);
 		// var_dump(cart);
-        redirect(base_url());
+        redirect('welcome/dashboard');
     }
     
     public function cart(){
@@ -39,7 +49,29 @@ class Welcome extends CI_Controller {
     public function clear_cart()
     {
         $this->cart->destroy();
-        redirect(base_url());
+        $this->load->view('show_cart');
+    }
+
+    function order(){
+		$this->load->view('add_order');
+	}
+
+    Public Function checkout()
+    {
+        $customer_name = $this->input->Post('customer_name');
+        $address = $this->input->Post('address');
+        $a = $this->input->post();
+
+        // var_dump($this->cart());
+        $ArrInsert = Array(
+            'customer_name' => $customer_name,
+            'address' => $address
+        );
+
+        $this->model_products->InsertDataCheckout($ArrInsert);
+        $this->model_products->updateStock('10001');
+        $this->cart->destroy();
+        Redirect(Base_url(''));
     }
 
 }

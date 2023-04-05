@@ -8,10 +8,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <?=anchor(base_url(), 'Tes VCI Nafa', ['class'=>'navbar-brand'])?>
+      <?=anchor(base_url(), 'Nafa Belajar CI', ['class'=>'navbar-brand'])?>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             
       <ul class="nav navbar-nav navbar-right">
@@ -19,7 +18,7 @@
         <li>
             <?php
                 $text_cart_url  = '<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>';
-                $text_cart_url .= ' Shopping Cart: '. $this->cart->total_items() .' items';
+                $text_cart_url .= ''. $this->cart->total_items() .' items';
             ?>
             <?=anchor('welcome/cart', $text_cart_url)?>
         </li>

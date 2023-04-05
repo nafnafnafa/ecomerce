@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Tes VCI Nafa</title>
+        <title>Nafa Belajar CI</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -17,7 +17,7 @@
             <div class="thumbnail" style=" background-color:#B8860B;">
               <div class="caption" style="width: 400px;">
                 <h3 style="min-height:60px;"><?=$product->product_name?></h3>
-                <p>Rp. <?=$product->price?></p>
+                <p>Rp. <?=number_format($product->price)?></p>
                 <p>
                     <?=anchor('welcome/add_to_cart/' . $product->pcode, 'Buy' , [
                         'class'    => 'btn btn-primary',
