@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Nafa Belajar CI</title>
+        <title>Test Teknikal - Nafa</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -56,6 +56,9 @@
                     <th style="text-align: center;">Product</th>
                     <th style="text-align: center;">Qty</th>
                     <th style="text-align: center;">Price</th>
+                    <th style="text-align: center;">Discount</th>
+                    <th style="text-align: center;">Net</th>
+                    <th style="text-align: center;">PPN</th>
                 </tr>
             </thead>
             <tbody>
@@ -70,13 +73,16 @@
                     <td><?= $items['name'] ?></td>
                     <td align="right"><?= number_format($items['qty'],0,',','.') ?></td>
                     <td align="right"><?= number_format($items['price'],0,',','.') ?></td>
+                    <td align="right"><?= number_format(1000,0,',','.') ?></td>
+                    <td align="right"><?= number_format($this->cart->total()-1000,0,',','.'); ?></td>
+                    <td align="right"><?= number_format(($this->cart->total()-1000)*10/100,0,',','.') ?></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
             <tfoot>
                 <tr>
-                    <td align="right" colspan="3">Subtotal </td>
-                    <td align="right"><?= number_format($this->cart->total(),0,',','.'); ?></td>
+                    <td align="right" colspan="6">Subtotal </td>
+                    <td align="right"><?= number_format(($this->cart->total()-1000)+($this->cart->total()-1000)*10/100,0,',','.'); ?></td>
                 </tr>
             </tfoot>
         </table>

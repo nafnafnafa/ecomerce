@@ -60,7 +60,7 @@ class Welcome extends CI_Controller {
     {
         $customer_name = $this->input->Post('customer_name');
         $address = $this->input->Post('address');
-        $a = $this->input->post();
+        $a = $this->cart->post();
 
         // var_dump($this->cart());
         $ArrInsert = Array(

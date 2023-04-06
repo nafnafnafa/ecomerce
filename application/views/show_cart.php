@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Nafa Belajar CI</title>
+        <title>Test Teknikal - Nafa</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <style>
+            .register{
+            margin-left: 17%;
+            }
+            body {
+                        /* background-image: url("img_tree.gif"), url("paper.gif"); */
+                        background-color: #F0F8FF;
+                }
+        </style>
     </head>
     <body>
         <?php $this->load->view('layout/top_layout') ?>
         
         <h3 style="padding-left: 40px;">Rincian Pesanan</h3>
         <div style="padding-left: 40px; padding-right:40px;">
-        <table class="table table-bordered table-striped table-hover" style="background-color: #D6EEEE;">
+        <table class="table table-bordered table-striped table-hover" style="background-color: #B8860B;">
             <thead>
                 <tr>
                     <th style="text-align: center; ">No</th>

@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <?=anchor(base_url(), 'Nafa Belajar CI', ['class'=>'navbar-brand'])?>
+      <?=anchor(base_url(), 'Test Teknikal - Nafa', ['class'=>'navbar-brand'])?>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
